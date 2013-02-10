@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{ page.title }} - Irina Bolychevsky</title>
+	<link rel="stylesheet" href="/styles/master.css">
+	<link rel="stylesheet" href="/webfonts/ss-social.css">
+	<script src="//use.typekit.net/kra6eoe.js"></script>
+	<script>try{Typekit.load()}catch(e){}</script>
+</head>
+<body>
+
+{% assign selected = page.selected or 'blog' %}
+<nav>
+	<ul>
+	{% for nav in site.nav %}
+		<li{% if nav.id == page.selected %} class="active"{% endif %}>
+			<a href="{{ nav.url }}">{{ nav.label }}</a>
+		</li>
+	{% endfor %}
+	</ul>
+</nav>
+
+{{ content }}
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+.work {
+	color: @workText;
+	background: @workBg url("../images/bg.png");
+	padding: ( @unit * 2 ) 0;
+	text-align: center;
+}
+
+.services {
+	color: @servicesText;
+	background: @servicesBg url("../images/bg.png");
+	text-align: center;
+	.wrap {
+		padding: ( @unit * 2 ) 0;
+	}
+	h3 {
+		font-weight: normal;
+	}
+	ul {
+		margin: @unit 0 0 0;
+		padding: 0;
+		li {
+			display: inline;
+			margin: 0 @unit;
+		}
+	}
+	a {
+		color: darken(@servicesText, 10%);
+		font-size: @logoSize / 1.5;
+		text-decoration: none;
+		&:hover {
+			color: @servicesText;
+		}
+		span {
+			display: none;
+		}
+		&:before {
+			font-weight: bold;
+		}
+	}
+}
+
+.thanks {
+	text-align: center;
+	color: @quoteText;
+	background: @quoteBg url("../images/bg.png");
+	padding: ( @unit * 3 ) 0;
+	.wrap {
+		font-family: @fontScript;
+		font-size: 50px;
+		line-height: 1.1;
+	}
+}

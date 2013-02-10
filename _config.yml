@@ -1,0 +1,11 @@
+safe: true
+lsi: false
+pygments: true
+
+nav:
+  - id:    home
+    url:   /
+    label: Home
+  - id:    blog
+    url:   /blog.html
+    label: Blog

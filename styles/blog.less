@@ -1,0 +1,41 @@
+.post {
+	background: @postBg url("../images/bg.png");
+	h1,
+	h2,
+	h3,
+	h4 {
+		font-family: "adelle";
+		font-weight: 600;
+	}
+	h1 {
+		font-size: @fontSize * 4;
+	}
+	h2 {
+		font-size: @fontSize * 3;
+	}
+	h3 {
+		font-size: @fontSize * 2;
+	}
+	h4 {
+		font-size: @fontSize;
+	}
+}
+
+.posts {
+	list-style-type: none;
+	margin: ( @unit * 2 ) 0;
+	padding: 0;
+	li {
+		position: relative;
+		padding-left: 160px;
+		span {
+			position: absolute;
+			left: 0;
+			width: 120px;
+			padding-right: @unit;
+			text-align: right;
+			border-right: 1px dotted #CCC;
+			color: #666;
+		}
+	}
+}
