@@ -1,13 +1,13 @@
 .work {
 	color: @workText;
-	background: @workBg url("../images/bg.png");
+	background: @workBg;
 	padding: ( @unit * 2 ) 0;
 	text-align: center;
 }
 
 .services {
 	color: @servicesText;
-	background: @servicesBg url("../images/bg.png");
+	background: @servicesBg;
 	text-align: center;
 	.wrap {
 		padding: ( @unit * 2 ) 0;
@@ -24,11 +24,14 @@
 		}
 	}
 	a {
-		color: darken(@servicesText, 10%);
+		position: relative;
+		color: darken(@servicesText, 20%);
 		font-size: @logoSize / 1.5;
 		text-decoration: none;
+		.transition(top .1s ease-in);
 		&:hover {
 			color: @servicesText;
+			top: ( 0 - ( @unit / 2 ) );
 		}
 		span {
 			display: none;
@@ -36,17 +39,5 @@
 		&:before {
 			font-weight: bold;
 		}
-	}
-}
-
-.thanks {
-	text-align: center;
-	color: @quoteText;
-	background: @quoteBg url("../images/bg.png");
-	padding: ( @unit * 3 ) 0;
-	.wrap {
-		font-family: @fontScript;
-		font-size: 50px;
-		line-height: 1.1;
 	}
 }

@@ -1,23 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>{{ page.title }} - Blog - Irina Bolychevsky</title>
-	<link rel="stylesheet" href="/styles/master.css">
-	<link rel="stylesheet" href="/webfonts/ss-social.css">
-	<script src="//use.typekit.net/kra6eoe.js"></script>
-	<script>try{Typekit.load()}catch(e){}</script>
-</head>
-<body>
-
-<nav>
-	<ul>
-	{% for nav in site.nav %}
-		<li{% if nav.id == 'blog' %} class="active"{% endif %}>
-			<a href="{{ nav.url }}">{{ nav.label }}</a>
-		</li>
-	{% endfor %}
-	</ul>
-</nav>
+---
+layout: default
+---
 
 <section class="post">
 	<div class="wrap">
@@ -30,6 +13,3 @@
 		<a href="/blog.html">&larr; See all posts</a>
 	</div>
 </footer>
-
-</body>
-</html>
