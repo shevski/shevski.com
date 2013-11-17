@@ -373,6 +373,7 @@ h2 {
 body {
   background: #f6f6f6;
   color: #111111;
+  overflow-y: scroll;
 }
 .wrap {
   display: block;
@@ -392,7 +393,7 @@ body {
 }
 nav {
   font-family: "adelle", Georgia, serif;
-  background: #333333;
+  background: #222222;
   text-align: center;
 }
 nav ul {
@@ -406,50 +407,51 @@ nav ul li {
 }
 nav ul li a {
   display: inline-block;
-  padding: 18px 20px 10px 20px;
-  color: #eeeeee;
+  padding: 12px 20px 10px 20px;
+  color: #f6f6f6;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1;
   text-decoration: none;
-  border-bottom: 2px solid #333333;
+  border-top: 4px solid #222222;
 }
 nav ul li.active a,
 nav ul li a:hover {
-  border-bottom-color: #ff3652;
+  border-top-color: #f6f6f6;
+  color: #f6f6f6;
 }
 header {
-  background: #00ab72;
-  color: #eeeeee;
+  background: #a01f62;
+  color: #f6f6f6;
   text-align: center;
 }
 header hgroup {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 60px;
-  width: 340px;
+  margin-top: 40px;
+  width: 280px;
 }
 header hgroup .logo,
 header hgroup .me {
   float: left;
-  -webkit-border-radius: 150px;
-  -moz-border-radius: 150px;
-  border-radius: 150px;
+  -webkit-border-radius: 120px;
+  -moz-border-radius: 120px;
+  border-radius: 120px;
   -webkit-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
 }
 header hgroup .logo {
-  width: 150px;
-  height: 150px;
-  line-height: 150px;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
   text-align: center;
   font-family: 'adelle';
-  font-size: 71.42857142857143px;
+  font-size: 57.14285714285714px;
   font-weight: bold;
   background-color: #222222;
-  color: #eeeeee;
+  color: #f6f6f6;
   margin-right: 40px;
 }
 header h1,
@@ -459,34 +461,61 @@ header h2 {
   font-weight: normal;
 }
 header h1 {
-  padding: 60px 0 0 0;
-  font-size: 38px;
+  padding: 40px 0 0 0;
+  font-size: 30px;
+  font-weight: bold;
 }
 header h2 {
-  padding: 10px 0 60px 0;
-  font-size: 28px;
+  padding: 10px 0 40px 0;
+  font-size: 22px;
 }
 a {
   color: #a01f62;
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+}
+a:hover {
+  color: #751748;
 }
 footer .wrap {
   padding: 20px 0 40px 0;
-  border-top: 1px dotted #c3c3c3;
   text-align: center;
 }
+.grid {
+  *zoom: 1;
+  margin: 40px auto;
+}
+.grid:before,
+.grid:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.grid:after {
+  clear: both;
+}
+.grid .aside {
+  float: left;
+  width: 120px;
+  margin-right: 20px;
+  color: #666666;
+}
+.grid .content {
+  float: right;
+  width: 660px;
+}
+hr {
+  margin: 40px 0;
+  border: 1px solid #a6a6a6;
+  border-width: 1px 0 0 0;
+}
 .work {
-  color: #333333;
-  background: #dddddd;
-  padding: 40px 0;
+  padding: 40px 0 0 0;
   text-align: center;
 }
 .services {
-  color: #dddddd;
-  background: #333333;
   text-align: center;
 }
 .services .wrap {
@@ -505,16 +534,10 @@ footer .wrap {
 }
 .services a {
   position: relative;
-  color: #aaaaaa;
-  font-size: 100px;
+  font-size: 80px;
   text-decoration: none;
-  -webkit-transition: top 0.1s ease-in;
-  -moz-transition: top 0.1s ease-in;
-  -o-transition: top 0.1s ease-in;
-  transition: top 0.1s ease-in;
 }
 .services a:hover {
-  color: #dddddd;
   top: -10px;
 }
 .services a span {
@@ -523,27 +546,38 @@ footer .wrap {
 .services a:before {
   font-weight: bold;
 }
-.post {
-  background: #f6f6f6 url("../images/bg.png");
-}
 .post h1,
 .post h2,
 .post h3,
 .post h4 {
-  font-family: "adelle";
+  font-family: "adelle", Georgia, serif;
   font-weight: 600;
+  margin: 0;
 }
 .post h1 {
-  font-size: 64px;
+  font-size: 40px;
+  margin-bottom: 20px;
 }
 .post h2 {
-  font-size: 48px;
+  font-size: 32px;
+  margin-bottom: 10px;
 }
 .post h3 {
-  font-size: 32px;
+  font-size: 24px;
+  margin-bottom: 6.666666666666667px;
 }
 .post h4 {
   font-size: 16px;
+  margin-bottom: 5px;
+}
+.post .title {
+  margin-left: 140px;
+}
+.social {
+  margin: 20px 0;
+}
+.social p {
+  margin: 0;
 }
 .posts {
   list-style-type: none;
@@ -552,14 +586,11 @@ footer .wrap {
 }
 .posts li {
   position: relative;
-  padding-left: 160px;
+  padding-left: 140px;
 }
 .posts li span {
   position: absolute;
   left: 0;
   width: 120px;
-  padding-right: 20px;
-  text-align: right;
-  border-right: 1px dotted #CCC;
-  color: #666;
+  color: #666666;
 }

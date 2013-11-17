@@ -13,6 +13,7 @@ h2 {
 body {
 	background: @bg;
 	color: @text;
+	overflow-y: scroll;
 }
 
 .wrap {
@@ -34,17 +35,18 @@ nav {
 			margin: 0 ( @unit / 2 );
 			a {
 				display: inline-block;
-				padding: ( @unit - 2 ) @unit ( @unit / 2 ) @unit;
+				padding: ( ( @unit / 2 ) + 2 ) @unit ( @unit / 2 ) @unit;
 				color: @navText;
 				text-transform: uppercase;
 				font-size: 14px;
 				line-height: 1;
 				text-decoration: none;
-				border-bottom: 2px solid @navBg;
+				border-top: 4px solid @navBg;
 			}
 			&.active a,
 			a:hover {
-				border-bottom-color: @navSelected;
+				border-top-color: @navSelected;
+				color: @navText;
 			}
 		}
 	}
@@ -56,7 +58,7 @@ header {
 	text-align: center;
 	hgroup {
 		.center-block();
-		margin-top: 60px;
+		margin-top: 40px;
 		width: ( @logoSize * 2 ) + ( @unit * 2 );
 		.logo,
 		.me {
@@ -83,24 +85,48 @@ header {
 		font-weight: normal;
 	}
 	h1 {
-		padding: @unit * 3 0 0 0;
-		font-size: 38px;
+		padding: ( @unit * 2 ) 0 0 0;
+		font-size: 30px;
+		font-weight: bold;
 	}
 	h2 {
-		padding: ( @unit / 2 ) 0 ( @unit * 3 ) 0;
-		font-size: 28px;
+		padding: ( @unit / 2 ) 0 ( @unit * 2 ) 0;
+		font-size: 22px;
 	}
 }
 
 a {
-	color: @quoteBg;
-	.transition(all 0.2s ease-in);
+	color: @primary;
+	.transition(all .1s ease-in);
+	&:hover {
+		color: darken(@primary, 10%);
+	}
 }
 
 footer .wrap {
 	padding: @unit 0 ( @unit * 2 ) 0;
-	border-top: 1px dotted darken(@bg, 20%);
 	text-align: center;
+}
+
+.grid {
+	.clearfix;
+	margin: ( @unit * 2 ) auto;
+	.aside {
+		float: left;
+		width: @asideWidth;
+		margin-right: @unit;
+		color: @textFaded;
+	}
+	.content {
+		float: right;
+		width: @siteWidth - @asideWidth - @unit;
+	}
+}
+
+hr {
+	margin: ( @unit * 2 ) 0;
+	border: 1px solid lighten(@textFaded, 25%);
+	border-width: 1px 0 0 0;
 }
 
 @import 'index.less';

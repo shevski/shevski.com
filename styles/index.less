@@ -1,13 +1,9 @@
 .work {
-	color: @workText;
-	background: @workBg;
-	padding: ( @unit * 2 ) 0;
+	padding: ( @unit * 2 ) 0 0 0;
 	text-align: center;
 }
 
 .services {
-	color: @servicesText;
-	background: @servicesBg;
 	text-align: center;
 	.wrap {
 		padding: ( @unit * 2 ) 0;
@@ -25,12 +21,9 @@
 	}
 	a {
 		position: relative;
-		color: darken(@servicesText, 20%);
 		font-size: @logoSize / 1.5;
 		text-decoration: none;
-		.transition(top .1s ease-in);
 		&:hover {
-			color: @servicesText;
 			top: ( 0 - ( @unit / 2 ) );
 		}
 		span {

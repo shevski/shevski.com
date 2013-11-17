@@ -1,23 +1,37 @@
 .post {
-	background: @postBg url("../images/bg.png");
 	h1,
 	h2,
 	h3,
 	h4 {
-		font-family: "adelle";
+		font-family: @fontSerif;
 		font-weight: 600;
+		margin: 0;
 	}
 	h1 {
-		font-size: @fontSize * 4;
+		font-size: @fontSize * 2.5;
+		margin-bottom: @unit;
 	}
 	h2 {
-		font-size: @fontSize * 3;
+		font-size: @fontSize * 2;
+		margin-bottom: @unit/2;
 	}
 	h3 {
-		font-size: @fontSize * 2;
+		font-size: @fontSize * 1.5;
+		margin-bottom: @unit/3;
 	}
 	h4 {
 		font-size: @fontSize;
+		margin-bottom: @unit/4;
+	}
+	.title {
+		margin-left: @asideWidth + @unit;
+	}
+}
+
+.social {
+	margin: @unit 0;
+	p {
+		margin: 0;
 	}
 }
 
@@ -27,15 +41,12 @@
 	padding: 0;
 	li {
 		position: relative;
-		padding-left: 160px;
+		padding-left: @asideWidth + @unit;
 		span {
 			position: absolute;
 			left: 0;
-			width: 120px;
-			padding-right: @unit;
-			text-align: right;
-			border-right: 1px dotted #CCC;
-			color: #666;
+			width: @asideWidth;
+			color: @textFaded;
 		}
 	}
 }

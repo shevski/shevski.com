@@ -1,15 +1,27 @@
 ---
 layout: default
+selected: blog
 ---
 
 <section class="post">
-	<div class="wrap">
-		{{ content }}
+	<div class="wrap grid">
+		<h1 class="title">{{ page.title }}</h1>
+		<article class="content">
+			{{ content }}
+			<hr>
+			<p><a href="/blog.html">&larr; See all posts</a></p>
+		</article>
+		<aside class="aside">
+			{{ page.date | date_to_string }}
+			<div class="social">
+				<p>
+					<a href="https://twitter.com/share" class="twitter-share-button" data-via="shevski">Tweet</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				</p>
+				<p>
+					<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fshevski.com{{ page.url | cgi_escape }}&amp;send=false&amp;layout=button_count&amp;width=120&amp;show_faces=true&amp;font&amp;colorscheme=light&amp;action=like&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:21px;" allowTransparency="true"></iframe>
+				</p>
+			</div>
+		</aside>
 	</div>
 </section>
-
-<footer>
-	<div class="wrap">
-		<a href="/blog.html">&larr; See all posts</a>
-	</div>
-</footer>
