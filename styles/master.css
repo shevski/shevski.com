@@ -372,7 +372,7 @@ h2 {
 }
 body {
   background: #f6f6f6;
-  color: #111111;
+  color: #555555;
   overflow-y: scroll;
 }
 .wrap {
@@ -424,7 +424,7 @@ nav ul li a:hover {
 }
 header {
   background: #a01f62;
-  color: #f6f6f6;
+  color: #ede1e7;
   text-align: center;
 }
 header hgroup {
@@ -472,14 +472,14 @@ header h2 {
   font-size: 22px;
 }
 a {
-  color: #1ea292;
+  color: #000000;
   -webkit-transition: all 0.1s ease-in;
   -moz-transition: all 0.1s ease-in;
   -o-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
 }
 a:hover {
-  color: #16776b;
+  color: #555555;
 }
 footer .wrap {
   padding: 20px 0 40px 0;
@@ -516,9 +516,6 @@ hr {
 .work {
   padding: 40px 0 0 0;
   text-align: center;
-}
-.work .wrap {
-  width: 550px;
 }
 .services {
   text-align: center;
