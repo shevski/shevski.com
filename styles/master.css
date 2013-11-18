@@ -392,9 +392,11 @@ body {
   clear: both;
 }
 nav {
+  display: none;
   font-family: "adelle", Georgia, serif;
   background: #222222;
   text-align: center;
+  border-bottom: 4px solid #a01f62;
 }
 nav ul {
   margin: 0;
@@ -470,14 +472,14 @@ header h2 {
   font-size: 22px;
 }
 a {
-  color: #a01f62;
+  color: #1ea292;
   -webkit-transition: all 0.1s ease-in;
   -moz-transition: all 0.1s ease-in;
   -o-transition: all 0.1s ease-in;
   transition: all 0.1s ease-in;
 }
 a:hover {
-  color: #751748;
+  color: #16776b;
 }
 footer .wrap {
   padding: 20px 0 40px 0;
@@ -514,6 +516,9 @@ hr {
 .work {
   padding: 40px 0 0 0;
   text-align: center;
+}
+.work .wrap {
+  width: 550px;
 }
 .services {
   text-align: center;

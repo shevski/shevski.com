@@ -23,9 +23,11 @@ body {
 }
 
 nav {
+	display: none;
 	font-family: @fontSerif;
 	background: @navBg;
 	text-align: center;
+	border-bottom: 4px solid @primary;
 	ul {
 		margin: 0;
 		padding: 0;
@@ -96,10 +98,10 @@ header {
 }
 
 a {
-	color: @primary;
+	color: @tertiary;
 	.transition(all .1s ease-in);
 	&:hover {
-		color: darken(@primary, 10%);
+		color: darken(@tertiary, 10%);
 	}
 }
 
